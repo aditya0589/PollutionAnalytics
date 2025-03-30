@@ -42,8 +42,8 @@ Clone the Repository
 bash
 Copy
 Edit
-git clone https://github.com/your-username/Carbon-Footprint-India-Analytics.git
-cd Carbon-Footprint-India-Analytics
+git clone https://github.com/aditya0589/PollutionAnalytics.git
+cd PollutionAnalytics
 Create a Virtual Environment
 
 bash
