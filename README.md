@@ -72,7 +72,7 @@ Government Reports (Ministry of Environment, Forest and Climate Change, India)
 
 Open Data Platforms (e.g., Kaggle, World Bank, Global Carbon Atlas)
 
-Custom Scraped Data (collected via web scraping techniques)
+Custom Data
 
 🏆 Future Enhancements
 Integration with real-time APIs for live pollution and emission tracking.
@@ -98,4 +98,4 @@ Open a pull request
 This project is licensed under the MIT License.
 
 📩 Contact
-For queries or suggestions, reach out at your-email@example.com or open an issue on GitHub.
+For queries or suggestions, reach out at yraditya@gmail.com or open an issue on GitHub.
