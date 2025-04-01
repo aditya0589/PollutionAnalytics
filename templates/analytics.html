@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analytics</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <h1>Data Analytics Tool</h1>
+
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/analytics">Analytics</a></li>
+        </ul>
+    </nav>
+
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+
+    <form action="/plot" method="post">
+        <label for="x_axis">Select X-axis:</label>
+        <select name="x_axis">
+            {% for column in columns %}
+                <option value="{{ column }}">{{ column }}</option>
+            {% endfor %}
+        </select>
+
+        <label for="y_axis">Select Y-axis:</label>
+        <select name="y_axis">
+            {% for column in columns %}
+                <option value="{{ column }}">{{ column }}</option>
+            {% endfor %}
+        </select>
+
+        <label for="plot_type">Select Plot Type:</label>
+        <select name="plot_type">
+            <option value="scatter">Scatter Plot</option>
+            <option value="line">Line Chart</option>
+            <option value="bar">Bar Chart</option>
+            <option value="histogram">Histogram</option>
+        </select>
+
+        <button type="submit">Generate Plot</button>
+    </form>
+
+    {% if graph_html %}
+        <h2>Generated Plot</h2>
+        <div>{{ graph_html | safe }}</div>
+    {% endif %}
+
+    
+</body>
+</html>
